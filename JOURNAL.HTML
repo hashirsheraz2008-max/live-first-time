@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryana Journals</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<style>
+:root {
+  --dark: #0b132b;
+  --blue: #1c2541;
+  --teal: #5bc0be;
+  --gold: #fcca46;
+  --white: #ffffff;
+}
+body {
+  font-family:'Poppins', sans-serif;
+  background:#f5f5f5;
+  margin:0;
+  padding-top:70px;
+}
+/* Navbar */
+.navbar {
+  background-color: var(--blue);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.navbar-brand {
+   font-weight: 700;
+   color: var(--gold) !important;
+}
+.navbar-nav .nav-link {
+   color: var(--white) !important;
+   margin-left: 15px;
+   font-weight: 500;
+   transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover { 
+  color: var(--gold) !important; 
+}
+
+/* Card Grid */
+.card-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  padding:50px;
+  justify-items:center;
+}
+.card {
+  width:220px; height:300px;
+  border-radius:20px; overflow:hidden;
+  position:relative;
+  background:#fff;
+  box-shadow:8px 8px 15px rgba(0,0,0,0.2);
+  transition:transform 0.3s ease;
+  cursor:pointer;
+}
+.card:hover { transform:scale(1.05); }
+.card img { width:100%; height:100%; object-fit:cover; border-radius:20px; }
+
+.overlay {
+  position:absolute; bottom:0; left:0; right:0;
+  height:100%; background:rgba(0,0,0,0.85);
+  color:#fff; opacity:0;
+  transition:opacity 0.3s ease;
+  padding:15px; display:flex; flex-direction:column;
+  justify-content:center; align-items:center; text-align:center;
+  font-size:13px;
+}
+.card:hover .overlay { opacity:1; }
+.overlay h5 { font-weight:bold; color: var(--gold); margin-bottom:8px; }
+.overlay p { margin:0 0 10px 0; font-size:12px; line-height:1.4; }
+.detail-text { display:none; margin-top:8px; font-size:11px; color: var(--gold); }
+
+/* Buttons */
+.btn-buy, .btn-detail, .btn-save {
+  background-color: var(--teal);
+  color: var(--white);
+  font-weight:600;
+  border:none;
+  border-radius:20px;
+  padding:6px 15px;
+  transition:0.3s ease;
+  margin:2px;
+  cursor:pointer;
+}
+.btn-buy:hover, .btn-detail:hover, .btn-save:hover {
+  background-color: var(--gold);
+  color: var(--dark);
+}
+
+/* Footer */
+footer {
+  background-color: var(--blue);
+  text-align: center;
+  padding: 35px 0;
+  margin-top: 70px;
+  color: var(--white);
+  font-size: 0.95rem;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+footer.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+footer a { color: var(--gold); text-decoration:none; }
+footer a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+      
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="INDEX.HTML">Ryana Calendars</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="INDEX.HTML">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Products</a>
+          <ul class="dropdown-menu bg-dark">
+             <li><a class="dropdown-item text-white" href="clandar.html">Calendars</a></li>
+             <li><a class="dropdown-item text-white" href="DIARY.HTML">Diaries</a></li>
+             <li><a class="dropdown-item text-white" href="JOURNAL.HTML">Journals</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="ABOUT.HTML">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="CONTACT.HTML">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Journal Cards -->
+<div class="card-grid">
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 1.webp"><div class="overlay"><h5>Vintage Journal</h5><p>Hardcover | 160 Pages<br><b>Rs 450</b></p><p class="detail-text">Vintage cover with cream paper, ideal for notes and sketches.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 2.jpeg"><div class="overlay"><h5>Planner Journal</h5><p>Organized Layout | Daily Sections<br><b>Rs 450</b></p><p class="detail-text">Helps plan daily tasks and reflections efficiently.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 3.webp"><div class="overlay"><h5>Personal Journal</h5><p>Soft Leather | A5 Size<br><b>Rs 450</b></p><p class="detail-text">Perfect for personal reflections and travel notes.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 4.webp"><div class="overlay"><h5>Classic Journal</h5><p>Hardcover | A5<br><b>Rs 450</b></p><p class="detail-text">Elegant design with strong spine and smooth pages.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 5.jpeg"><div class="overlay"><h5>Artistic Journal</h5><p>Sketch + Write | Thick Paper<br><b>Rs 450</b></p><p class="detail-text">Perfect mix of sketchbook and notebook for artists.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 6.webp"><div class="overlay"><h5>Leather Bound Journal</h5><p>Refillable | Durable Cover<br><b>Rs 450</b></p><p class="detail-text">Luxurious leather with refillable pages for long-term use.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 7.jpg"><div class="overlay"><h5>Designer Journal</h5><p>Gold Embossed | Compact<br><b>Rs 450</b></p><p class="detail-text">Stylish design with elegant golden patterns.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 8.jpg"><div class="overlay"><h5>Travel Journal</h5><p>Elastic Lock | Compact Size<br><b>Rs 450</b></p><p class="detail-text">Compact journal with elastic band for travelers.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 9.jpg"><div class="overlay"><h5>Creative Journal</h5><p>Art Paper | A5<br><b>Rs 450</b></p><p class="detail-text">Smooth pages for drawing, doodles, or notes.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 10.jpg"><div class="overlay"><h5>Modern Journal</h5><p>Stylish Texture | Smooth Paper<br><b>Rs 450</b></p><p class="detail-text">Trendy cover with professional appeal.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 11.jpeg"><div class="overlay"><h5>Elegant Journal</h5><p>Matte Finish | 80 Sheets<br><b>Rs 450</b></p><p class="detail-text">Sophisticated look and soft matte texture.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 12.webp"><div class="overlay"><h5>Retro Journal</h5><p>Antique Style | Hardcover<br><b>Rs 450</b></p><p class="detail-text">Classic design with nostalgic vintage touch.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 13.jpeg"><div class="overlay"><h5>Spiral Journal</h5><p>Wire-bound | Easy Flip<br><b>Rs 450</b></p><p class="detail-text">Wire spiral allows flat opening for easy writing.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 14.jpg"><div class="overlay"><h5>Cute Journal</h5><p>Cartoon Cover | 80 Sheets<br><b>Rs 450</b></p><p class="detail-text">Fun and playful design for students.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+
+  <div class="card"><img src="ASSET/JOURNALIMAGES/jou 15.jpg"><div class="overlay"><h5>Executive Journal</h5><p>Professional Look | Premium Quality<br><b>Rs 450</b></p><p class="detail-text">Ideal for office professionals with refined finish.</p><button class="btn-buy">Buy Now</button><button class="btn-detail">Details</button><button class="btn-save">Download Word</button></div></div>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+  <div style="max-width:1000px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+    <div style="flex:1; min-width:200px; margin:10px;">
+         <h3>Ryana Diaries</h3>
+         <p>Your personal diary, organized and safe.</p>
+    </div>
+    <div style="flex:1; min-width:200px; margin:10px;">
+      <h4>Quick Links</h4>
+      <ul style="list-style:none; padding:0;">
+         <li><a href="INDEX.HTML">Home</a></li>
+         <li><a href="ABOUT.HTML">About</a></li>
+         <li><a href="CONTACT.HTML">Contact</a></li>
+      </ul>
+    </div>
+    <div style="flex:1; min-width:200px; margin:10px;">
+       <h4>Follow Us</h4>
+       <a href="#"><i class="fab fa-facebook-f"></i></a>
+       <a href="#"><i class="fab fa-twitter"></i></a>
+       <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <p style="margin-top:15px; font-size:14px;">&copy; 2025 Ryana Diaries. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Toggle Details
+document.querySelectorAll('.btn-detail').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const overlay = btn.closest('.overlay');
+    const detailPara = overlay.querySelector('.detail-text');
+    if(detailPara.style.display === 'block'){ 
+      detailPara.style.display = 'none'; 
+      btn.textContent = 'Details'; 
+    } else { 
+      detailPara.style.display = 'block'; 
+      btn.textContent = 'Hide'; 
+    }
+  });
+});
+
+// Download Word
+document.querySelectorAll('.btn-save').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const overlay = btn.closest('.overlay');
+    const title = overlay.querySelector('h5').innerText;
+    const specs = overlay.querySelectorAll('p')[0].innerText;
+    const price = overlay.querySelectorAll('p')[0].innerText.match(/Rs \d+/)[0];
+    const details = overlay.querySelector('.detail-text').innerText;
+
+    const htmlContent = `<html xmlns:o='urn:schemas-microsoft-com:office:office'
+    xmlns:w='urn:schemas-microsoft-com:office:word'
+    xmlns='http://www.w3.org/TR/REC-html40'>
+    <head><meta charset="utf-8"><title>${title}</title></head>
+    <body><h1>${title}</h1><h3>Specs:</h3><p>${specs}</p><h3>Price:</h3><p>${price}</p><h3>Details:</h3><p>${details}</p></body></html>`;
+
+    const blob = new Blob(['\ufeff', htmlContent], {type:'application/msword'});
+    const filename = title.replace(/\s+/g,"_")+".doc";
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    link.click();
+  });
+});
+
+// Footer animation
+window.addEventListener('scroll', function(){
+  const footer = document.getElementById('footer');
+  const footerTop = footer.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  if(footerTop < windowHeight - 50){
+  footer.classList.add('visible');
+  }
+}
+);
+</script>
+</body>
+</html>

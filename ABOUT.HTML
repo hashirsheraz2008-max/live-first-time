@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Description" content="About Ryana Calendars"/>
+<title>About Us - Ryana Calendars</title>
+
+<!-- CSS LINKS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+<style>
+:root {
+  --dark: #0b132b;
+  --blue: #1c2541;
+  --teal: #5bc0be;
+  --gold: #fcca46;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark);
+  color: var(--white);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--blue);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.navbar-brand {
+   font-weight: 700;
+   color: var(--gold) !important;
+}
+.navbar-nav .nav-link {
+   color: var(--white) !important;
+   margin-left: 15px;
+   font-weight: 500;
+   transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover { 
+  color: var(--gold) !important; 
+}
+
+/* Dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Slider */
+.carousel-inner { height:100vh; }
+.carousel-item img { width:100%; height:100%; object-fit: cover; }
+.carousel-caption {
+  background: rgba(0,0,0,0.4);
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align:center;
+}
+.carousel-caption p { font-size:1.2rem; color: var(--white); }
+
+/* Hero Image */
+
+.hero h1 {
+   font-size: 3rem; 
+   color: var(--gold); 
+   margin-top: 25px; 
+   opacity:0;
+   transform: translateY(30px); 
+   transition: all 1s ease; 
+}
+.hero-img { 
+  display:block; 
+  margin: 50px auto 30px;
+  max-width:80%; 
+  border-radius:12px; 
+  box-shadow:0 5px 20px rgba(0,0,0,0.4);
+  animation: fadeInUp 1.5s ease;
+}
+
+/* Sections */
+.section-heading { 
+  font-size: 2.8rem; 
+  text-align:center; 
+  margin:40px 0 20px; 
+  opacity:0; 
+  transform: translateY(50px); 
+  transition: all 1s ease; 
+}
+.section-heading.active { 
+  opacity:1; 
+  transform: translateY(0); 
+}
+.paragraph { 
+  max-width:900px; 
+  margin:auto; 
+  font-size: 1.1rem; 
+  line-height:1.8; 
+  opacity:0; 
+  transform: translateY(50px); 
+  transition: all 1s ease; 
+}
+.paragraph.active { 
+  opacity:1; 
+  transform: translateY(0); 
+}
+
+/* CEO Message */
+.ceo-message { 
+  background-color: var(--blue); 
+  padding:30px; 
+  margin:30px auto; 
+  max-width:800px; 
+  border-radius:12px; 
+  box-shadow:0 5px 15px rgba(0,0,0,0.3); 
+  opacity:0; 
+  transform: translateY(50px); 
+  transition: all 1s ease;
+}
+.ceo-message.active { 
+  opacity:1; 
+  transform: translateY(0); 
+}
+
+/* Footer */
+footer {
+   background-color: var(--blue);
+   text-align: center;
+   padding: 35px 0;
+   margin-top: 70px; 
+   color: var(--white); 
+   font-size: 0.95rem; 
+   opacity:0; 
+   transform: translateY(50px); 
+   transition: all 1s ease;
+}
+footer.active {
+   opacity: 1;
+   transform: translateY(0);
+}
+footer a {
+   color: var(--gold); 
+   text-decoration: none; 
+}
+footer a:hover {
+   text-decoration: underline; 
+}
+footer a i {
+   transition: transform 0.3s ease, color 0.3s ease;
+}
+footer a:hover i { 
+   transform: translateY(-5px) scale(1.2); 
+   color: #ffd700;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-caption p { font-size: 1rem; }
+  .hero-img { max-width: 90%; }
+  .section-heading { font-size: 2.2rem; }
+  .paragraph { font-size: 1rem; padding:0 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="INDEX.HTML">Ryana Calendars</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="INDEX.HTML">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Products</a>
+          <ul class="dropdown-menu bg-dark">
+               <li><a class="dropdown-item text-white" href="clandar.html">Calendars</a></li>
+               <li><a class="dropdown-item text-white" href="DIARY.HTML">Diaries</a></li>
+               <li><a class="dropdown-item text-white" href="JOURNAL.HTML">Journals</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="ABOUT.HTML">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="CONTACT.HTML">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Slider -->
+<div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://cdn.bluent.com/images/best-office-building.webp" alt="">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+          <p>Where creativity meets productivity</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://t3.ftcdn.net/jpg/16/61/59/12/360_F_1661591284_1Ct9y3d8q5KS1SlZd8xeB6kICZiryvIu.jpg" alt="">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+           <p>Collaborating to deliver the best products</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+         <p>Planning and organizing made simple</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainSlider" data-bs-slide="next">
+       <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Hero Image -->
+<img class="hero-img" src="https://t3.ftcdn.net/jpg/06/98/15/28/360_F_698152816_iofj0EaoJp6jjKsHkMSoAEawmbKg3at0.jpg" alt="About Hero">
+
+<!-- About Section -->
+   <h1 class="section-heading">About Us</h1>
+   <p class="paragraph">At Ryana Calendars, we’ve spent over a decade perfecting the art of crafting premium diaries, journals, and calendars. Guided by a passion for quality, creativity, and innovation, we design products that help people organize their routines and spark inspiration in everyday moments. Our mission is simple — to bring joy, focus, and efficiency to every home and workspace.</p>
+
+ <!-- CEO Message -->
+ <h2 class="section-heading">CEO Message</h2>
+ <div class="ceo-message paragraph">
+ <p>“Our commitment is to provide our customers with exceptional products that combine practicality and elegance. Every calendar, diary, or journal we design reflects our passion for excellence and attention to detail.”</p>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div style="max-width:1000px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+    <div style="flex:1; min-width:200px; margin:10px;">
+       <h3>Ryana Diaries</h3>
+       <p>Your personal diary, organized and safe.</p>
+    </div>
+    <div style="flex:1; min-width:200px; margin:10px;">
+      <h4>Quick Links</h4>
+      <ul style="list-style:none; padding:0;">
+         <li><a href="INDEX.HTML">Home</a></li>
+         <li><a href="ABOUT.HTML">About</a></li>
+         <li><a href="CONTACT.HTML">Contact</a></li>
+      </ul>
+    </div>
+    <div style="flex:1; min-width:200px; margin:10px;">
+       <h4>Follow Us</h4>
+       <a href="#"><i class="fab fa-facebook-f"></i></a>
+       <a href="#"><i class="fab fa-twitter"></i></a>
+       <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <p style="margin-top:15px; font-size:14px;">&copy; 2025 Ryana Diaries. All rights reserved.</p>
+</footer>
+
+<!-- JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function scrollAnim() {
+  let headings = document.querySelectorAll('.section-heading');
+  let paragraphs = document.querySelectorAll('.paragraph, .ceo-message');
+  let footer = document.querySelector('footer');
+
+  headings.forEach(h => {
+    let top = h.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50) { h.classList.add('active'); }
+  });
+
+  paragraphs.forEach(p => {
+    let top = p.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50) { p.classList.add('active'); }
+  });
+
+  let footerTop = footer.getBoundingClientRect().top;
+  if(footerTop < window.innerHeight - 50) { footer.classList.add('active'); }
+}
+
+window.addEventListener('scroll', scrollAnim);
+window.addEventListener('load', scrollAnim);
+</script>
+
+</body>
+</html>
